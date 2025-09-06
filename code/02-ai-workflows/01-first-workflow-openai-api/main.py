@@ -24,6 +24,7 @@ def generate_x_post(topic: str) -> str:
         </topic>
 """
     payload = {"model": "gpt-4o", "input": prompt}
+    print(f"API KEY = {OPENAI_API_KEY}")
     response = requests.post(
         "https://api.openai.com/v1/responses",
         json=payload,
